@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Fügt die Live-Auslastung von Hallenbad und Sauna des Phoenixbads hinzu."
+      }
+    },
+    "error": {
+      "cannot_connect": "phoenixbad.de ist nicht erreichbar.",
+      "invalid_response": "phoenixbad.de hat geantwortet, aber ohne Auslastungsdaten (vermutlich wurde die Website geändert)."
+    },
+    "abort": {
+      "single_instance_allowed": "Phoenixbad ist bereits eingerichtet."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "threshold_hallenbad": "Hallenbad: ruhig unter",
+          "threshold_sauna": "Sauna: ruhig unter"
+        },
+        "data_description": {
+          "threshold_hallenbad": "Unter dieser Besucherzahl gilt das Hallenbad als ruhig.",
+          "threshold_sauna": "Unter dieser Besucherzahl gilt die Sauna als ruhig."
+        }
+      }
+    }
+  },
+  "device": {
+    "hallenbad": { "name": "Phoenixbad Hallenbad" },
+    "sauna": { "name": "Phoenixbad Sauna" }
+  },
+  "entity": {
+    "sensor": {
+      "visitors": { "name": "Besucher", "unit_of_measurement": "Personen" },
+      "free_spots": { "name": "Freie Plätze", "unit_of_measurement": "Plätze" },
+      "occupancy": { "name": "Auslastung" },
+      "capacity": { "name": "Kapazität", "unit_of_measurement": "Personen" }
+    },
+    "binary_sensor": {
+      "quiet": { "name": "Ruhig" }
+    }
+  }
+}

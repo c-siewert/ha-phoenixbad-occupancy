@@ -1,0 +1,45 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "description": "Adds the live occupancy of the Phoenixbad indoor pool and sauna."
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach phoenixbad.de.",
+      "invalid_response": "phoenixbad.de answered, but without occupancy data (the website may have changed)."
+    },
+    "abort": {
+      "single_instance_allowed": "Phoenixbad is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "data": {
+          "threshold_hallenbad": "Pool: quiet below",
+          "threshold_sauna": "Sauna: quiet below"
+        },
+        "data_description": {
+          "threshold_hallenbad": "The pool counts as quiet below this many visitors.",
+          "threshold_sauna": "The sauna counts as quiet below this many visitors."
+        }
+      }
+    }
+  },
+  "device": {
+    "hallenbad": { "name": "Phoenixbad indoor pool" },
+    "sauna": { "name": "Phoenixbad sauna" }
+  },
+  "entity": {
+    "sensor": {
+      "visitors": { "name": "Visitors", "unit_of_measurement": "people" },
+      "free_spots": { "name": "Free spots", "unit_of_measurement": "spots" },
+      "occupancy": { "name": "Occupancy" },
+      "capacity": { "name": "Capacity", "unit_of_measurement": "people" }
+    },
+    "binary_sensor": {
+      "quiet": { "name": "Quiet" }
+    }
+  }
+}

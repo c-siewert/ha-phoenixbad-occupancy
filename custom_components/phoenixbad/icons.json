@@ -1,0 +1,16 @@
+{
+  "entity": {
+    "sensor": {
+      "visitors": { "default": "mdi:account-group" },
+      "free_spots": { "default": "mdi:account-plus-outline" },
+      "occupancy": { "default": "mdi:gauge" },
+      "capacity": { "default": "mdi:account-multiple-check" }
+    },
+    "binary_sensor": {
+      "quiet": {
+        "default": "mdi:account-group",
+        "state": { "on": "mdi:meditation" }
+      }
+    }
+  }
+}
